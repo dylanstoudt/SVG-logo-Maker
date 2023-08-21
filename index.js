@@ -1,4 +1,8 @@
+// Require external files needed to run index.js
 const fs = require("fs")
-let SVG = require("./lib/svg")
+const inquirer = require('requirer')
+const questions = require('./lib/questions')
+const setShape = require(`./lib/setShape`)
+let SVG = require("./examples/logo.svg")
 
-let example = new SVG("AND", "gre")
+let example = new SVG()
