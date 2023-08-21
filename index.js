@@ -1,8 +1,8 @@
 // Require external files needed to run index.js
 const fs = require("fs")
 const inquirer = require('requirer')
-// const colorKeywords = require('./lib/colorKeywords')
-const questions = require('./lib/questions')
+
+const questions = require('./lib/question')
 const setShape = require(`./lib/setShape`)
 let SVG = require("./examples/logo.svg")
 const { colorKeywords } = require("./lib/colorKeywords")
@@ -14,8 +14,6 @@ function createLogo(response) {
     const svg = setShape(response);
     fs.writeFile(SVG, svg, ()=> console.log('Generated logo.svg'));
 }
-colorKeywords
-
 // initialize, ask questions then createLogo using responses, catch any errors
 function init() {
     inquirer 
